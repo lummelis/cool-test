@@ -1,0 +1,55 @@
+$background: orange;
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+}
+.full{
+    height: 100vh;
+    background: $background;
+}
+#parallax{
+    padding: 40vh 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .parallax-element{
+        position: relative;
+        height: 300px;
+        width: 300px;
+    }
+    .first{
+        background: blue;
+        top: 50px;
+        right: 100px;
+    }
+    .second{
+        background: yellow;
+    }
+    .third{
+        background: green;
+        bottom: 50px;
+        left: 100px;
+    }
+}
+
+#scroll {
+    padding: 20vh 0;
+    display: grid;
+    place-items: center;
+
+    h1 {
+        opacity: 0;
+        transform: rotate(180degrees);
+        transition: all 1s linear;
+
+        &.visible {
+            opacity: 1;
+        }
+    }
+}
