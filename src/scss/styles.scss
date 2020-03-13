@@ -1,55 +1,69 @@
-$background: orange;
+$background: teal;
+
 html{
     box-sizing: border-box;
 }
+
 *, *::before, *::after{
     box-sizing: inherit;
 }
+
 body{
     margin: 0;
 }
+
+
 .full{
     height: 100vh;
     background: $background;
+    display: grid;
+    place-items: center;
 }
+
 #parallax{
     padding: 40vh 0;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     .parallax-element{
         position: relative;
         height: 300px;
         width: 300px;
     }
+
     .first{
-        background: blue;
+        background: yellowgreen;
         top: 50px;
         right: 100px;
     }
+
     .second{
-        background: yellow;
+        background: blue;
     }
+
     .third{
-        background: green;
+        background: orange;
         bottom: 50px;
         left: 100px;
     }
 }
 
-#scroll {
-    padding: 20vh 0;
+
+#scroll{
+    padding: 10vh 0;
     display: grid;
     place-items: center;
 
-    h1 {
+    h1{
         opacity: 0;
-        transform: rotate(180degrees);
-        transition: all 1s linear;
-
-        &.visible {
+        transform: rotate(180deg);
+        transition: all 0.5s linear;
+        
+        &.visible{
             opacity: 1;
+            transform: rotate(0deg);
         }
     }
 }
